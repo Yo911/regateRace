@@ -4,6 +4,8 @@
  *
  * Created on 19 avril 2015, 13:08
  */
+#include "Participant.h"
+#include "Step.h"
 
 #ifndef REGATTA_H
 #define	REGATTA_H

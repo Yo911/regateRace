@@ -13,7 +13,7 @@ std::string Participant::getName() {
 }
 
 int Participant::getId() {
-    return name;
+    return id;
 }
 
 bool Participant::operator ==(const Participant& p) {

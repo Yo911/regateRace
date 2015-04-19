@@ -14,6 +14,7 @@ class Boat {
     float coeff;
     void calculCoeff();
 public:
+    Boat();
     Boat(int, int);
     float getCoeff();
 };

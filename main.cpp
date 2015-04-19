@@ -22,7 +22,7 @@ int main(int argc, char** argv) {
     Regatta r = usr.createRegatta("first regatta", timeNow());
     r.addPaticipant(Participant(10, "Jhon", Boat(21, 21)));
     r.addPaticipant(Participant(20, "Doe", Boat(19, 19)));
-    cout << r.getParticipants(20) << endl;
+    cout << r.getParticipants(20).getName() << endl;
     return 0;
 }
 

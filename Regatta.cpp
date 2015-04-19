@@ -1,5 +1,3 @@
-#include <list>
-
 #include "Regatta.h"
 #include "Step.h"
 #include "Participant.h"
@@ -31,8 +29,7 @@ Regatta::~Regatta() {
 
 Participant& Regatta::getParticipants(std::string _name) {
     for (std::list<Participant>::const_iterator iterator = participants.begin(), end = participants.end(); iterator != end; ++iterator) {
-        Participant &p = *iterator;
-        if(p.getName() == _name)
+        if(iterator->getName() == _name)
             return p;
     }
     return nullptr;
@@ -40,8 +37,7 @@ Participant& Regatta::getParticipants(std::string _name) {
 
 Participant& Regatta::getParticipants(int _id) {
     for (std::list<Participant>::const_iterator iterator = participants.begin(), end = participants.end(); iterator != end; ++iterator) {
-        Participant &p = *iterator;
-        if(p.getId() == _id)
+        if(iterator->getId() == _id)
             return p;
     }
     return nullptr;
@@ -61,9 +57,8 @@ void Regatta::addStep(const Step& s) {
 
 void Regatta::displayStepClassement() {
     for( std::list<Step>::const_iterator it = steps.begin(), end = steps.end(); it != end ; ++it) {
-        Step &s = *it;
         std::cout << std::endl;
-        displayStepClassement(s);
+        displayStepClassement(*it);
         std::cout << std::endl;
     }
 }

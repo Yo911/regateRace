@@ -5,6 +5,8 @@
  * Created on 19 avril 2015, 13:08
  */
 
+#include "Boat.h"
+
 #ifndef PARTICIPANT_H
 #define	PARTICIPANT_H
 

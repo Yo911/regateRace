@@ -1,5 +1,12 @@
 #include "Boat.h"
 
+Boat::Boat() {
+    length = 20;
+    weight = 20;
+    coeff = 1;
+}
+
+
 Boat::Boat(int _length, int _weight):length(_length),weight(_weight) {
     calculCoeff();
 }
