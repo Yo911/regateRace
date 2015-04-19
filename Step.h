@@ -11,9 +11,12 @@
 class Step {
     int id;
     int length;
+    int *classement;
     tm time;
 public:
-    Step(int, int, tm);
+    Step(int, int, int*, tm);
+    ~Step();
+    int * getClassement();
 };
 
 #endif	/* STEP_H */

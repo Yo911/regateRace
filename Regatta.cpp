@@ -1,25 +1,32 @@
 #include <list>
 
 #include "Regatta.h"
+#include "Step.h"
+#include "Participant.h"
 
-Regatta::Regatta(std::string _name, std::tm _date, std::list<Participant> _participants, std::list<Step> _steps) {
+Regatta::Regatta(std::string _name, std::tm _date, int* _classement, std::list<Participant> _participants, std::list<Step> _steps) {
     name = _name;
     date = _date;
+    classement = _classement
     participants = _participants;
     steps = _steps;
 }
 
-Regatta::Regatta(std::string _name, std::tm _date, std::list<Participant> _participants):Regatta(_name, _date, _participants, nullptr) {
+Regatta::Regatta(std::string _name, std::tm _date, int* _classement, std::list<Participant> _participants):Regatta(_name, _date, _classement, _participants, nullptr) {
     steps = new std::list<Step>();
 }
 
-Regatta::Regatta(std::string _name, std::tm _date, std::list<Step> _steps):Regatta(_name, _date, nullptr, _steps) {
+Regatta::Regatta(std::string _name, std::tm _date, int* _classement, std::list<Step> _steps):Regatta(_name, _date, _classement, nullptr, _steps) {
     participants = new std::list<Participant>();
 }
 
-Regatta::Regatta(std::string _name, std::tm _date):Regatta(_name, _date, nullptr, nullptr) {
+Regatta::Regatta(std::string _name, std::tm _date, int* _classement):Regatta(_name, _date, _classement, nullptr, nullptr) {
     participants = new std::list<Participant>();
     steps = new std::list<Step>();
+}
+
+Regatta::~Regatta() {
+    delete[] classement;
 }
 
 Participant& Regatta::getParticipants(std::string _name) {
@@ -52,6 +59,33 @@ void Regatta::addStep(const Step& s) {
     steps.push_back(s);
 }
 
+void Regatta::displayStepClassement() {
+    for( std::list<Step>::const_iterator it = steps.begin(), end = steps.end(); it != end ; ++it) {
+        Step &s = *it;
+        std::cout << std::endl;
+        displayStepClassement(s);
+        std::cout << std::endl;
+    }
+}
+
+void Regatta::displayStepClassement(const Step& s) {
+    int * c = s.getClassement();
+    for(int i = 0 ; i < participants.size() ; i++) {
+        Participant &p = getParticipants(c[i]);
+        std::cout << i + 1 << " : " << p.getName() << std::endl;
+    }
+}
+
+
+
 void Regatta::removeStep(const Step& s) {
     steps.remove(s);
+}
+
+bool Regatta::operator==(const Regatta& r) {
+    return name == r.name;
+}
+
+bool Regatta::operator!=(const Regatta& r) {
+    return name != r.name;
 }

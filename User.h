@@ -19,7 +19,6 @@ public :
     void registerParticipant(const Participant &);
     void createRegatta(const std::string _name, const tm _date);
     void removeRegatta(const Regatta &);
-    void launchRegatta(Regatta &);
     void displayClassement(const Regatta &);
 };
 

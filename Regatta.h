@@ -13,11 +13,13 @@ class Regatta {
     std::tm date;
     std::list<Participant> participants;
     std::list<Step> steps;
+    int * classement;
 public :
-    Regatta(std::string, std::tm);
-    Regatta(std::string, std::tm, std::list<Step>);
-    Regatta(std::string, std::tm, std::list<Participant>);
-    Regatta(std::string, std::tm, std::list<Participant>, std::list<Step>);
+    Regatta(std::string, std::tm, int*);
+    Regatta(std::string, std::tm, int*, std::list<Step>);
+    Regatta(std::string, std::tm, int*, std::list<Participant>);
+    Regatta(std::string, std::tm, int*, std::list<Participant>, std::list<Step>);
+    ~Regatta();
     
     Participant& getParticipants(std::string);
     Participant& getParticipants(int);
@@ -26,6 +28,11 @@ public :
     void removePaticipant(const Participant &);
     void addStep(const Step &);
     void removeStep(const Step &);
+    void displayStepClassement();
+    void displayStepClassement(const Step &);
+    
+    bool operator==(const Regatta& );
+    bool operator!=(const Regatta& );
 };
 
 #endif	/* REGATTA_H */
