@@ -17,6 +17,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>Boat.cpp</itemPath>
       <itemPath>Participant.cpp</itemPath>
       <itemPath>Regatta.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
@@ -46,6 +47,8 @@
           <standard>8</standard>
         </ccTool>
       </compileType>
+      <item path="Boat.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="Boat.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Participant.cpp" ex="false" tool="1" flavor2="0">
@@ -83,6 +86,8 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="Boat.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="Boat.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Participant.cpp" ex="false" tool="1" flavor2="0">

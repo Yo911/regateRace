@@ -12,11 +12,11 @@ class Boat {
     int length;
     int weight;
     float coeff;
+    ~Boat();
+    void calculCoeff();
 public:
     Boat(int, int);
-    ~Boat();
-    
-    void calculCoeff();
+    float getCoeff();
 };
 
 #endif	/* BOAT_H */
