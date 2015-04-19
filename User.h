@@ -17,7 +17,7 @@ class User {
 public :
     User();
     void registerParticipant(const Participant &);
-    void createRegatta(const std::string _name, const tm _date);
+    Regatta& createRegatta(const std::string _name, const tm _date);
     void removeRegatta(const Regatta &);
     void displayClassement(const Regatta &);
 };

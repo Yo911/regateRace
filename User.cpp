@@ -12,8 +12,10 @@ void User::registerParticipant(const Participant& p) {
     participants.push_back(p);
 }
 
-void User::createRegatta(const std::string _name, const tm _date) {
-    regattas.push_back(Regatta(_name, _date));
+Regatta& User::createRegatta(const std::string _name, const tm _date) {
+    Regatta r(_name, _date);
+    regattas.push_back(r);
+    return r;
 }
 
 void User::removeRegatta(const Regatta& r) {
