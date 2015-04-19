@@ -18,7 +18,6 @@ public :
     Regatta(std::string, std::tm, std::list<Step>);
     Regatta(std::string, std::tm, std::list<Participant>);
     Regatta(std::string, std::tm, std::list<Participant>, std::list<Step>);
-    ~Regatta();
     
     Participant& getParticipants(std::string);
     Participant& getParticipants(int);

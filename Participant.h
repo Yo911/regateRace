@@ -17,6 +17,7 @@ public :
     std::string getName();
     int getId();
     bool operator==(const Participant &);
+    bool operator!=(const Participant &);
 };
 
 #endif	/* PARTICIPANT_H */

@@ -19,6 +19,8 @@
                    projectFiles="true">
       <itemPath>Participant.cpp</itemPath>
       <itemPath>Regatta.cpp</itemPath>
+      <itemPath>Step.cpp</itemPath>
+      <itemPath>User.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -56,7 +58,11 @@
       </item>
       <item path="Regatta.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Step.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="Step.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="User.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="User.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -93,7 +99,11 @@
       </item>
       <item path="Regatta.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Step.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="Step.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="User.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="User.h" ex="false" tool="3" flavor2="0">
       </item>

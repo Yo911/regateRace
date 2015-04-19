@@ -37,6 +37,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/Participant.o \
 	${OBJECTDIR}/Regatta.o \
+	${OBJECTDIR}/Step.o \
+	${OBJECTDIR}/User.o \
 	${OBJECTDIR}/main.o
 
 
@@ -58,11 +60,11 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cppproblemerace.exe
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/regaterace.exe
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cppproblemerace.exe: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/regaterace.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cppproblemerace ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/regaterace ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/Participant.o: Participant.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -73,6 +75,16 @@ ${OBJECTDIR}/Regatta.o: Regatta.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Regatta.o Regatta.cpp
+
+${OBJECTDIR}/Step.o: Step.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Step.o Step.cpp
+
+${OBJECTDIR}/User.o: User.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/User.o User.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -85,7 +97,7 @@ ${OBJECTDIR}/main.o: main.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cppproblemerace.exe
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/regaterace.exe
 
 # Subprojects
 .clean-subprojects:

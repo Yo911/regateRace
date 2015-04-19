@@ -13,9 +13,9 @@ CND_BUILDDIR=build
 CND_DLIB_EXT=dll
 NBTMPDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}/tmp-packaging
 TMPDIRNAME=tmp-packaging
-OUTPUT_PATH=${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cppproblemerace
-OUTPUT_BASENAME=cppproblemerace
-PACKAGE_TOP_DIR=cppproblemerace/
+OUTPUT_PATH=${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/regaterace
+OUTPUT_BASENAME=regaterace
+PACKAGE_TOP_DIR=regaterace/
 
 # Functions
 function checkReturnCode
@@ -60,15 +60,15 @@ mkdir -p ${NBTMPDIR}
 
 # Copy files and create directories and links
 cd "${TOP}"
-makeDirectory "${NBTMPDIR}/cppproblemerace/bin"
+makeDirectory "${NBTMPDIR}/regaterace/bin"
 copyFileToTmpDir "${OUTPUT_PATH}.exe" "${NBTMPDIR}/${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}.exe" 0755
 
 
 # Generate tar file
 cd "${TOP}"
-rm -f ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/cppproblemerace.tar
+rm -f ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/regaterace.tar
 cd ${NBTMPDIR}
-tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/cppproblemerace.tar *
+tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/regaterace.tar *
 checkReturnCode
 
 # Cleanup

@@ -9,10 +9,11 @@
 #define	STEP_H
 
 class Step {
+    int id;
     int length;
     tm time;
 public:
-    Step(int, tm);
+    Step(int, int, tm);
 };
 
 #endif	/* STEP_H */

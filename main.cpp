@@ -11,7 +11,7 @@
 #include <iostream>
 #include <ctime>
 
-#include "Participant.h"
+#include "User.h"
 
 using namespace std;
 

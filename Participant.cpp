@@ -19,3 +19,7 @@ int Participant::getId() {
 bool Participant::operator ==(const Participant& p) {
     return p.id == id;
 }
+
+bool Participant::operator !=(const Participant& p) {
+    return p.id != id;
+}
